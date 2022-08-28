@@ -1,38 +1,38 @@
 import React from 'react';
 import SmallCard from './SmallCard';
-
-/*  Cada set de datos es un objeto literal */
-
-/* <!-- Movies in DB --> */
-
-let moviesInDB = {
-    title: 'Movies in Data Base',
-    color: 'primary', 
-    cuantity: 21,
-    icon: 'fa-clipboard-list'
-}
-
-/* <!-- Total awards --> */
-
-let totalAwards = {
-    title:' Total awards', 
-    color:'success', 
-    cuantity: '79',
-    icon:'fa-award'
-}
-
-/* <!-- Actors quantity --> */
-
-let actorsQuantity = {
-    title:'Actors quantity' ,
-    color:'warning',
-    cuantity:'49',
-    icon:'fa-user-check'
-}
-
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+import { useState, useEffect } from 'react';
 
 function ContentRowMovies(){
+    const [cantProducts, setCantProducts] = useState([]);
+    let cartProps = cantProducts;
+
+    useEffect(() => {
+        fetch('http://localhost:5000/api/products/')
+        .then(response => response.json())
+        .then(data => {
+            setCantProducts([
+                {
+                    title: 'Products in Data Base',
+                    color: 'primary', 
+                    cuantity: data.stock,
+                    icon: 'fa-clipboard-list'
+                }, 
+                {
+                    title:'Total products in the Drones category', 
+                    color:'success', 
+                    cuantity: data.countByCategory.drone,
+                    icon:'fa-award'
+                },
+                {
+                    title:'Total products in the Accesories category' ,
+                    color:'warning',
+                    cuantity:data.countByCategory.accesory,
+                    icon:'fa-user-check'
+                }
+            ])
+        }).catch(error => console.log(error));
+    }, []);
+
     return (
     
         <div className="row">
