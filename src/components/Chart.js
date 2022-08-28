@@ -15,7 +15,7 @@ function Chart (){
                 setProducts(currentProduct => currentProduct.concat(
                     {
                         Name: product.product_name,
-                        Price: product.price, 
+                        Price: 'USD ' + product.price, 
                         Category: product.category_id == 1 ? "Drone" : "Accesory",
                         Feature1: product.features1,
                         Feature2: product.features2,
@@ -41,15 +41,6 @@ function Chart (){
                                 <th>Feature Two</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Category</th>
-                                <th>Feature One</th>
-                                <th>Feature Two</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
                             {
                             tableRowsData.map( ( row , i) => {
