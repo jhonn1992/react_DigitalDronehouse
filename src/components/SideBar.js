@@ -2,6 +2,7 @@ import React from 'react';
 import image from '../assets/images/logo-DH.png';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
+import TotalUsersInDB from './TotalUsersInDB';
 import LastMovieInDb from './LastMovieInDb';
 import ContentRowMovies from './ContentRowMovies';
 import SearchMovies from './SearchMovies';
@@ -39,9 +40,9 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
+                <Link className="nav-link" to="/TotalUsersInDB">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Users</span>
                     </Link>
                 </li>
 
@@ -92,8 +93,8 @@ function SideBar(){
                 <Route exact path="/">
                     <ContentWrapper />
                 </Route>
-                <Route path="/GenresInDb">
-                    <GenresInDb />
+                <Route path="/TotalUsersInDB">
+                    <TotalUsersInDB />
                 </Route>
                 <Route path="/LastMovieInDb">
                     <LastMovieInDb />
