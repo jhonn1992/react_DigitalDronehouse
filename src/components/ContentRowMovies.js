@@ -15,19 +15,19 @@ function ContentRowMovies(){
                     title: 'Products in Data Base',
                     color: 'primary', 
                     cuantity: data.stock,
-                    icon: 'fa-clipboard-list'
+                    icon: 'fas fa-clipboard-list'
                 }, 
                 {
                     title:'Total products in the Drones category', 
                     color:'success', 
                     cuantity: data.countByCategory.drone,
-                    icon:'fa-award'
+                    icon:'fas fa-helicopter'
                 },
                 {
                     title:'Total products in the Accesories category' ,
                     color:'warning',
                     cuantity:data.countByCategory.accesory,
-                    icon:'fa-user-check'
+                    icon:'fas fa-gamepad'
                 }
             ])
         }).catch(error => console.log(error));
@@ -37,9 +37,9 @@ function ContentRowMovies(){
     
         <div className="row">
             
-            {cartProps.map( (movie, i) => {
+            {cartProps.map( (prop, i) => {
 
-                return <SmallCard {...movie} key={i}/>
+                return <SmallCard {...prop} key={i}/>
             
             })}
 

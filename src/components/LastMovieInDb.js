@@ -22,13 +22,12 @@ function LastMovieInDb(){
                     <div className="text-center">
                         <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src= { lastProduct.imageUrl } alt=" Star Wars - Mandalorian "/>
                     </div>
-                    <h4> {lastProduct.product_name} </h4>
+                    <h4 className="btn btn-danger"> {lastProduct.product_name} </h4>
                     <h5> - Features </h5>
                     <p> {lastProduct.features1} </p>
                     <p> {lastProduct.features2} </p>
                     <p> {lastProduct.features3} </p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
-                </div>
+                    </div>
             </div>
         </div>
     )

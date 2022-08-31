@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/logoDDH1Final.png';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
 import TotalUsersInDB from './TotalUsersInDB';
@@ -29,7 +29,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Digital Drone house</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -49,8 +49,8 @@ function SideBar(){
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/LastMovieInDb">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <i className="fas fa-satellite"></i>
+                        <span>Last product</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
@@ -64,7 +64,7 @@ function SideBar(){
                 <li className="nav-item nav-link">
                     <Link className="nav-link" to="/SearchMovies">
                         <i className="fas fa-search"></i>
-                        <span>Search a movie</span>
+                        <span>Product List</span>
                     </Link>
                 </li>
 
